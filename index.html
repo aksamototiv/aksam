@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aksam Oto - Hasarlı Araç İhale ve Satış</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BLACK BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        İster Üye Olup İhaleyle İster Garajdan Görerek Hemen Al
+      </div>
+      <div class="top-bar-right">
+        <span><i data-lucide="phone" class="icon-sm"></i> 444 15 48</span>
+        <span><i data-lucide="mail" class="icon-sm"></i> info@aksamoto.com.tr</span>
+        <a href="#"><i data-lucide="log-in" class="icon-sm"></i> Giriş Yap</a>
+        <a href="#"><i data-lucide="user-plus" class="icon-sm"></i> Üye Ol</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo-container">
+        <!-- Replicating AKSAM logo visually -->
+        <div class="aksam-logo">
+          <i data-lucide="zap" class="logo-icon"></i>
+          <span class="logo-text">AKSAM</span>
+        </div>
+      </div>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Anasayfa</a></li>
+          <li><a href="#" class="active">Tüm Araçlar</a></li>
+          <li><a href="#">Kurumsal</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-red-outline">
+          <i data-lucide="car"></i> Aracını Sat
+        </button>
+        <button class="btn btn-red-solid">
+          <i data-lucide="plus"></i> Araç Talep Edin
+        </button>
+        <button class="menu-btn"><i data-lucide="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BRANDS SLIDER (MOCKED) -->
+  <div class="brands-section">
+    <div class="container brands-inner">
+      <div class="brand-item"><div class="brand-circle">D</div><span>DACIA</span></div>
+      <div class="brand-item"><div class="brand-circle">F</div><span>FIAT</span></div>
+      <div class="brand-item"><div class="brand-circle">F</div><span>FORD</span></div>
+      <div class="brand-item"><div class="brand-circle">H</div><span>HONDA</span></div>
+      <div class="brand-item"><div class="brand-circle">H</div><span>HYUNDAI</span></div>
+      <div class="brand-item"><div class="brand-circle">I</div><span>IVECO</span></div>
+      <div class="brand-item"><div class="brand-circle">J</div><span>JEEP</span></div>
+      <div class="brand-item"><div class="brand-circle">M</div><span>MERCEDES</span></div>
+      <div class="brand-item"><div class="brand-circle">N</div><span>NISSAN</span></div>
+      <div class="brand-item"><div class="brand-circle">O</div><span>OPEL</span></div>
+      <div class="brand-item"><div class="brand-circle">P</div><span>PEUGEOT</span></div>
+      <div class="brand-item"><div class="brand-circle">R</div><span>RENAULT</span></div>
+      <div class="brand-item"><div class="brand-circle">S</div><span>SEAT</span></div>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <main class="container main-layout">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      
+      <div class="search-box">
+        <div class="search-icon-bg"><i data-lucide="search"></i></div>
+        <input type="text" placeholder="Araç No İle Ara">
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-header">
+          <h4>MARKALARA GÖRE KATEGORİ</h4>
+          <i data-lucide="chevron-up"></i>
+        </div>
+        <ul class="filter-list">
+          <li><span>AUDI</span> <span class="count">2</span></li>
+          <li><span>BMW</span> <span class="count">3</span></li>
+          <li><span>BYD</span> <span class="count">1</span></li>
+          <li><span>CHERY</span> <span class="count">1</span></li>
+          <li><span>CITROEN</span> <span class="count">3</span></li>
+          <li><span>DACIA</span> <span class="count">5</span></li>
+          <li><span>FIAT</span> <span class="count">12</span></li>
+        </ul>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-header">
+          <h4>ARAÇ TİPİ</h4>
+          <i data-lucide="chevron-up"></i>
+        </div>
+        <ul class="filter-list-checkbox">
+          <li><input type="checkbox"> AĞIR TİCARİ</li>
+          <li><input type="checkbox"> BETON MİKSERİ</li>
+          <li><input type="checkbox"> BİNEK</li>
+          <li><input type="checkbox"> ÇEKİCİ</li>
+          <li><input type="checkbox"> DORSE</li>
+          <li><input type="checkbox"> HAFİF TİCARİ</li>
+          <li><input type="checkbox"> HAFİF TİCARİ (Soğutucu Dahil)</li>
+          <li><input type="checkbox"> İŞ MAKİNESİ</li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+    <section class="content-area">
+      
+      <!-- Sorting Bar -->
+      <div class="sorting-bar">
+        <div class="sort-left">
+          <span>Sort:</span>
+          <select class="sort-select">
+            <option>Varsayılan Sıralama</option>
+          </select>
+          <button class="view-btn"><i data-lucide="list"></i></button>
+          <button class="view-btn active"><i data-lucide="grid"></i></button>
+        </div>
+        <div class="sort-right">
+          <strong>69 / 69</strong> araç gösteriliyor
+        </div>
+      </div>
+
+      <!-- CARS GRID -->
+      <div class="cars-grid">
+        
+        <!-- CAR 1: Ford Ranger -->
+        <div class="car-card">
+          <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+          <div class="car-info">
+            <h3 class="car-title">FORD RANGER XLT 4x4 2.0 ECOBLUE 170 10A/T</h3>
+            <div class="car-location"><i data-lucide="map-pin" class="icon-xs"></i> AKSAM SAMANDIRA</div>
+            
+            <div class="car-tags">
+              <span class="tag"><i data-lucide="car" class="icon-xs"></i> FORD</span>
+              <span class="tag"><i data-lucide="calendar" class="icon-xs"></i> 2023</span>
+              <span class="tag"><i data-lucide="activity" class="icon-xs"></i> 2.581 km</span>
+              <span class="tag"><i data-lucide="settings" class="icon-xs"></i> OTOMATİK</span>
+              <span class="tag"><i data-lucide="droplet" class="icon-xs"></i> DİZEL</span>
+              <span class="tag"><i data-lucide="file-text" class="icon-xs"></i> ÇEKME BELGELİ</span>
+              <span class="tag"><i data-lucide="alert-triangle" class="icon-xs"></i> ÇARPMA-ÇARPIŞMA</span>
+            </div>
+
+            <div class="car-footer">
+              <div class="car-price">1.445.000 ₺</div>
+              <div class="car-actions">
+                <button class="btn btn-gray-outline">Hemen Al</button>
+                <button class="btn btn-red-solid">İncele</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAR 2: BMW X1 -->
+        <div class="car-card">
+          <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+          <div class="car-info">
+            <h3 class="car-title">BMW X1 XDRIVE25e 1.5 245 M SPORT</h3>
+            <div class="car-location"><i data-lucide="map-pin" class="icon-xs"></i> AKSAM SAMANDIRA</div>
+            
+            <div class="car-tags">
+              <span class="tag"><i data-lucide="car" class="icon-xs"></i> BMW</span>
+              <span class="tag"><i data-lucide="calendar" class="icon-xs"></i> 2023</span>
+              <span class="tag"><i data-lucide="activity" class="icon-xs"></i> 2.200 km</span>
+              <span class="tag"><i data-lucide="settings" class="icon-xs"></i> OTOMATİK</span>
+              <span class="tag"><i data-lucide="droplet" class="icon-xs"></i> BENZİN / ELEKTRİK</span>
+              <span class="tag"><i data-lucide="file-text" class="icon-xs"></i> ÇEKME BELGELİ</span>
+              <span class="tag"><i data-lucide="alert-triangle" class="icon-xs"></i> ÇARPMA-ÇARPIŞMA</span>
+            </div>
+
+            <div class="car-footer">
+              <div class="car-price">2.445.000 ₺</div>
+              <div class="car-actions">
+                <button class="btn btn-gray-outline">Hemen Al</button>
+                <button class="btn btn-red-solid">İncele</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAR 3: VW Amarok -->
+        <div class="car-card">
+          <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')"></div>
+          <div class="car-info">
+            <h3 class="car-title">VOLKSWAGEN AMAROK STYLE PLUS 4MOTION 2.0 TDI 205 OV</h3>
+            <div class="car-location"><i data-lucide="map-pin" class="icon-xs"></i> AKSAM SAMANDIRA</div>
+            
+            <div class="car-tags">
+              <span class="tag"><i data-lucide="car" class="icon-xs"></i> VOLKSWAGEN</span>
+              <span class="tag"><i data-lucide="calendar" class="icon-xs"></i> 2023</span>
+              <span class="tag"><i data-lucide="activity" class="icon-xs"></i> 89.433 km</span>
+              <span class="tag"><i data-lucide="settings" class="icon-xs"></i> OTOMATİK</span>
+              <span class="tag"><i data-lucide="droplet" class="icon-xs"></i> DİZEL</span>
+              <span class="tag"><i data-lucide="file-text" class="icon-xs"></i> ÇEKME BELGELİ</span>
+              <span class="tag"><i data-lucide="alert-triangle" class="icon-xs"></i> ÇARPMA-ÇARPIŞMA</span>
+            </div>
+
+            <div class="car-footer">
+              <div class="car-price">1.465.000 ₺</div>
+              <div class="car-actions">
+                <button class="btn btn-gray-outline">Hemen Al</button>
+                <button class="btn btn-red-solid">İncele</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
