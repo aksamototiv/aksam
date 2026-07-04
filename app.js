@@ -13,7 +13,8 @@ class AppController {
     
     // Camera state
     this.cameraStream = null;
-    this.capturedPhotos = []; // Store data URLs of captured photos
+    this.cameraReady = false;
+    this.capturedPhotos = [];
 
     // Mock Garage Data
     this.garageData = [
@@ -22,18 +23,10 @@ class AppController {
         brand: 'BMW',
         model: 'X1 XDRIVE25e 1.5 245 M SPORT',
         img: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        year: 2023,
-        km: '2.200',
-        location: 'Aksam Samandıra',
-        status: 'Yüksek Hasar',
-        statusClass: 'hasar-yuksek',
-        priceBuyNow: '2.445.000',
-        priceAuction: '1.950.000',
-        costs: {
-          insurance: '520.000',
-          authorized: '380.000',
-          mechanic: '150.000'
-        },
+        year: 2023, km: '2.200', location: 'Aksam Samandıra',
+        status: 'Yüksek Hasar', statusClass: 'hasar-yuksek',
+        priceBuyNow: '2.445.000', priceAuction: '1.950.000',
+        costs: { insurance: '520.000', authorized: '380.000', mechanic: '150.000' },
         damages: [
           { title: "GÖÇÜK VE YIRTIK", desc: "Ön Tampon ve Sol Çamurluk Ağır Hasarlı. Değişim şart.", cost: "45.000", severity: "YÜKSEK", class: "hasar-yuksek" },
           { title: "ÇİZİK", desc: "Sol Ön Kapı derin çizik.", cost: "12.000", severity: "ORTA", class: "hasar-orta" }
@@ -44,18 +37,10 @@ class AppController {
         brand: 'FORD',
         model: 'RANGER XLT 4x4 2.0 ECOBLUE',
         img: 'https://images.unsplash.com/photo-1551830820-330a71b99659?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        year: 2023,
-        km: '2.581',
-        location: 'Aksam Samandıra',
-        status: 'Orta Hasar',
-        statusClass: 'hasar-orta',
-        priceBuyNow: '1.445.000',
-        priceAuction: '1.200.000',
-        costs: {
-          insurance: '210.000',
-          authorized: '145.000',
-          mechanic: '85.000'
-        },
+        year: 2023, km: '2.581', location: 'Aksam Samandıra',
+        status: 'Orta Hasar', statusClass: 'hasar-orta',
+        priceBuyNow: '1.445.000', priceAuction: '1.200.000',
+        costs: { insurance: '210.000', authorized: '145.000', mechanic: '85.000' },
         damages: [
           { title: "KAPORTA GÖÇÜĞÜ", desc: "Sağ arka çamurluk boyasız onarım mümkün.", cost: "15.000", severity: "DÜŞÜK", class: "hasar-dusuk" }
         ]
@@ -65,18 +50,10 @@ class AppController {
         brand: 'VOLKSWAGEN',
         model: 'AMAROK STYLE PLUS 4MOTION',
         img: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-        year: 2023,
-        km: '89.433',
-        location: 'Aksam Samandıra',
-        status: 'Yüksek Hasar',
-        statusClass: 'hasar-yuksek',
-        priceBuyNow: '1.465.000',
-        priceAuction: '1.100.000',
-        costs: {
-          insurance: '480.000',
-          authorized: '310.000',
-          mechanic: '190.000'
-        },
+        year: 2023, km: '89.433', location: 'Aksam Samandıra',
+        status: 'Yüksek Hasar', statusClass: 'hasar-yuksek',
+        priceBuyNow: '1.465.000', priceAuction: '1.100.000',
+        costs: { insurance: '480.000', authorized: '310.000', mechanic: '190.000' },
         damages: [
           { title: "TAVAN EZİLMESİ", desc: "Tavan sacı ve direklerde hasar mevcut.", cost: "110.000", severity: "YÜKSEK", class: "hasar-yuksek" }
         ]
@@ -93,29 +70,29 @@ class AppController {
   }
 
   bindEvents() {
+    // Start capture button
     document.getElementById('btn-start-capture')?.addEventListener('click', () => {
       this.captureStep = 1;
       this.capturedPhotos = [];
+      this.cameraReady = false;
       this.clearThumbnails();
       this.updateCaptureUI();
       this.showView('view-capture');
       this.startCamera();
     });
 
+    // Take photo button
     document.getElementById('btn-take-photo')?.addEventListener('click', () => {
       this.takePhoto();
     });
 
-    // Close button on capture view — stop camera
-    const closeBtn = document.querySelector('#view-capture .icon-btn');
-    if (closeBtn) {
-      // Remove inline onclick to handle properly
-      closeBtn.onclick = () => {
-        this.stopCamera();
-        this.showView('view-dashboard');
-      };
-    }
+    // Close capture button (stop camera + go back)
+    document.getElementById('btn-close-capture')?.addEventListener('click', () => {
+      this.stopCamera();
+      this.showView('view-dashboard');
+    });
 
+    // Bottom navigation
     document.querySelectorAll('.nav-item').forEach(btn => {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -130,75 +107,139 @@ class AppController {
 
   async startCamera() {
     const video = document.getElementById('camera-video');
-    
-    // Try rear camera first (environment), fallback to any camera
-    const constraints = [
-      { video: { facingMode: { ideal: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false },
+    if (!video) return;
+
+    // Check if getUserMedia is supported
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      this.showCameraError(
+        'Bu tarayıcı kamera erişimini desteklemiyor.\n\n' +
+        'Lütfen Google Chrome veya Safari kullanın.\n\n' +
+        'Not: Dosyayı doğrudan açtıysanız (file://), kamera çalışmaz. ' +
+        'HTTPS üzerinden (GitHub Pages) veya localhost ile açmanız gerekmektedir.'
+      );
+      return;
+    }
+
+    // Try different constraints in order of preference
+    const attempts = [
+      // 1. Rear camera, high resolution
+      { video: { facingMode: { exact: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false },
+      // 2. Rear camera, any resolution
       { video: { facingMode: 'environment' }, audio: false },
+      // 3. Any camera
       { video: true, audio: false }
     ];
 
     let stream = null;
-    for (const constraint of constraints) {
+    let lastError = null;
+
+    for (const constraints of attempts) {
       try {
-        stream = await navigator.mediaDevices.getUserMedia(constraint);
+        stream = await navigator.mediaDevices.getUserMedia(constraints);
         break;
       } catch (err) {
-        console.warn('Camera constraint failed, trying next:', err.message);
+        lastError = err;
+        console.warn('Kamera denemesi başarısız:', constraints, err.name, err.message);
       }
     }
 
     if (!stream) {
-      alert('Kamera erişimi sağlanamadı!\n\nLütfen tarayıcınızın kamera izinlerini kontrol edin.\n\nNot: GitHub Pages üzerinde kamera kullanabilmek için HTTPS bağlantısı gereklidir.');
+      let errorMsg = 'Kamera açılamadı.\n\n';
+      
+      if (lastError) {
+        switch (lastError.name) {
+          case 'NotAllowedError':
+          case 'PermissionDeniedError':
+            errorMsg += '❌ Kamera izni reddedildi.\n\n' +
+              'Çözüm: Tarayıcınızın adres çubuğundaki kamera/kilit ikonuna tıklayıp izin verin, ardından sayfayı yenileyin.';
+            break;
+          case 'NotFoundError':
+          case 'DevicesNotFoundError':
+            errorMsg += '❌ Kamera bulunamadı.\n\n' +
+              'Bu cihazda kullanılabilir bir kamera algılanamadı.';
+            break;
+          case 'NotReadableError':
+          case 'TrackStartError':
+            errorMsg += '❌ Kamera meşgul veya erişilemiyor.\n\n' +
+              'Başka bir uygulama kamerayı kullanıyor olabilir. Lütfen diğer uygulamaları kapatıp tekrar deneyin.';
+            break;
+          case 'OverconstrainedError':
+            errorMsg += '❌ İstenen kamera özellikleri desteklenmiyor.';
+            break;
+          case 'SecurityError':
+            errorMsg += '❌ Güvenlik hatası.\n\n' +
+              'Kamera, güvenli bağlantı (HTTPS) gerektirir. Dosyayı file:// ile açtıysanız çalışmaz.\n' +
+              'GitHub Pages linki üzerinden açın: https://emintelli1907-prog.github.io/aksam/';
+            break;
+          default:
+            errorMsg += `Hata: ${lastError.name} - ${lastError.message}`;
+        }
+      }
+      
+      this.showCameraError(errorMsg);
       return;
     }
 
+    // Success — attach stream to video
     this.cameraStream = stream;
     video.srcObject = stream;
     
-    // Wait for video to be ready
     video.onloadedmetadata = () => {
-      video.play();
+      video.play().then(() => {
+        this.cameraReady = true;
+        console.log('✅ Kamera başarıyla açıldı');
+      }).catch(err => {
+        console.error('Video oynatılamadı:', err);
+      });
     };
+  }
+
+  showCameraError(message) {
+    alert(message);
+    // Still allow demo flow without real camera
+    this.cameraReady = false;
   }
 
   stopCamera() {
     if (this.cameraStream) {
-      this.cameraStream.getTracks().forEach(track => track.stop());
+      this.cameraStream.getTracks().forEach(track => {
+        track.stop();
+      });
       this.cameraStream = null;
     }
+    this.cameraReady = false;
     const video = document.getElementById('camera-video');
-    if (video) video.srcObject = null;
+    if (video) {
+      video.srcObject = null;
+    }
   }
 
   takePhoto() {
     const video = document.getElementById('camera-video');
     const canvas = document.getElementById('camera-canvas');
     
-    if (!video || !video.srcObject) {
-      // If camera not available, still allow advancing steps for demo
-      this.advanceStep();
-      return;
+    if (this.cameraReady && video && video.readyState >= 2) {
+      // Real camera capture
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+      this.capturedPhotos.push(dataUrl);
+      
+      // Flash effect
+      this.triggerFlash();
+      
+      // Add thumbnail
+      this.addThumbnail(dataUrl);
+    } else {
+      // Demo mode — no camera available, flash anyway for UX
+      this.triggerFlash();
     }
 
-    // Set canvas to video dimensions
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    
-    // Get the image data URL
-    const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
-    this.capturedPhotos.push(dataUrl);
-
-    // Flash effect
-    this.triggerFlash();
-
-    // Add thumbnail
-    this.addThumbnail(dataUrl);
-
-    // Advance to next step
+    // Advance to next step regardless
     this.advanceStep();
   }
 
@@ -237,7 +278,7 @@ class AppController {
 
   renderGarage() {
     const container = document.getElementById('garage-grid-container');
-    if(!container) return;
+    if (!container) return;
 
     let html = '';
     this.garageData.forEach(car => {
@@ -274,9 +315,9 @@ class AppController {
     const stepEl = document.getElementById('capture-step');
     const textEl = document.getElementById('car-silhouette-text');
     
-    if(titleEl) titleEl.innerText = this.captureTitles[this.captureStep - 1];
-    if(stepEl) stepEl.innerText = this.captureStep;
-    if(textEl) textEl.innerText = `${this.captureTitles[this.captureStep - 1]} İçin Hizalayın`;
+    if (titleEl) titleEl.innerText = this.captureTitles[this.captureStep - 1];
+    if (stepEl) stepEl.innerText = this.captureStep;
+    if (textEl) textEl.innerText = `${this.captureTitles[this.captureStep - 1]} İçin Hizalayın`;
   }
 
   showView(viewId) {
@@ -286,7 +327,7 @@ class AppController {
   }
 
   goBack() {
-    if(this.currentView === 'view-report') {
+    if (this.currentView === 'view-report') {
       this.showView('view-garage');
       document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
       document.querySelector('[data-target="view-garage"]').classList.add('active');
@@ -300,7 +341,7 @@ class AppController {
   startAnalysis() {
     this.showView('view-analysis');
     
-    // Use the last captured photo as analysis background, or fallback
+    // Use last captured photo or fallback
     const analysisImg = document.getElementById('analysis-image-bg');
     if (this.capturedPhotos.length > 0) {
       analysisImg.style.backgroundImage = `url('${this.capturedPhotos[this.capturedPhotos.length - 1]}')`;
