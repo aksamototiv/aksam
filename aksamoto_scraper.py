@@ -1,287 +1,181 @@
 """
-Aksam Otomotiv (aksamoto.com.tr) Araç İlan Scraper
-===================================================
-Site React SPA olduğundan (tüm içerik JavaScript ile render ediliyor),
-klasik requests+BeautifulSoup ile çekilemez.
-Bu scraper Playwright kullanarak tarayıcıyı açar ve sayfayı gerçek bir
-kullanıcı gibi yükler.
+Aksam Otomotiv (aksamoto.com.tr) Arac Ilan Scraper v3
+=====================================================
+DOM yapisina gore optimize. Tekrarlari birlestir, URL'den yil cek.
 
 Gereksinimler:
     pip install playwright
     playwright install chromium
 
-Kullanım:
+Kullanim:
     python aksamoto_scraper.py
 """
 
 import asyncio
 import json
-import os
 import re
-import time
 from pathlib import Path
 from urllib.parse import urljoin
 
-# ============================================================
-# Playwright ile Scraping (Ana Yöntem — React SPA için zorunlu)
-# ============================================================
+BASE_URL = "https://aksamoto.com.tr"
+GALERI_DIR = Path("aksamoto_galeri")
 
-async def scrape_with_playwright():
-    """
-    Playwright ile aksamoto.com.tr sitesindeki araç ilanlarını çeker.
-    Görselleri aksamoto_galeri/ klasörüne indirir.
-    Sonuçları aksamoto_ilanlar.json dosyasına kaydeder.
-    """
+
+async def scrape():
     from playwright.async_api import async_playwright
 
-    BASE_URL = "https://aksamoto.com.tr"
-    GALERI_DIR = Path("aksamoto_galeri")
     GALERI_DIR.mkdir(exist_ok=True)
-
-    print("🚗 Aksam Otomotiv Scraper Başlatılıyor...")
-    print(f"📂 Görseller '{GALERI_DIR}' klasörüne kaydedilecek.\n")
-
-    results = []
+    print("\n" + "=" * 60)
+    print("  AKSAM OTOMOTIV - ARAC ILAN SCRAPER v3")
+    print("  aksamoto.com.tr")
+    print("=" * 60 + "\n")
 
     async with async_playwright() as p:
-        # Headless tarayıcı aç
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/125.0.0.0 Safari/537.36"
-            ),
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/125.0.0.0 Safari/537.36",
             viewport={"width": 1920, "height": 1080},
         )
         page = await context.new_page()
 
-        # ---- 1. Ana sayfayı aç ve React'ın render etmesini bekle ----
-        print(f"🌐 {BASE_URL} açılıyor...")
+        # 1) Sayfayi ac
+        print("[1/5] Sayfa aciliyor...")
         await page.goto(BASE_URL, wait_until="networkidle", timeout=30000)
-
-        # React'ın içeriği render etmesi için ekstra bekleme
         await page.wait_for_timeout(3000)
 
-        # ---- 2. Sayfayı aşağı kaydırarak lazy-load görselleri tetikle ----
-        print("📜 Sayfa aşağı kaydırılıyor (lazy-load tetikleme)...")
-        for _ in range(5):
+        # 2) Lazy-load icin asagi kaydir
+        print("[2/5] Sayfa kaydiriliyor (lazy-load)...")
+        for _ in range(10):
             await page.evaluate("window.scrollBy(0, window.innerHeight)")
-            await page.wait_for_timeout(800)
-
-        # En başa geri dön
+            await page.wait_for_timeout(500)
         await page.evaluate("window.scrollTo(0, 0)")
-        await page.wait_for_timeout(1000)
+        await page.wait_for_timeout(500)
 
-        # ---- 3. Araç kartlarını tespit et ----
-        # Farklı olası CSS seçicileri dene
-        card_selectors = [
-            ".vehicle-card",
-            ".car-card",
-            ".product-card",
-            ".listing-card",
-            ".arac-card",
-            "[class*='card']",
-            "[class*='vehicle']",
-            "[class*='listing']",
-            "[class*='product']",
-            "a[href*='/arac/']",
-            "a[href*='/ilan/']",
-            "a[href*='/vehicle/']",
-        ]
+        # 3) Tum /detay/ linklerini topla
+        print("[3/5] Arac kartlari araniyor...")
+        links = await page.query_selector_all('a[href*="/detay/"]')
+        print(f"  -> {len(links)} link bulundu")
 
-        cards = []
-        used_selector = None
-        for selector in card_selectors:
-            try:
-                found = await page.query_selector_all(selector)
-                if found and len(found) > 0:
-                    cards = found
-                    used_selector = selector
-                    break
-            except Exception:
+        # Her linki isle ve arac_no bazinda grupla
+        raw = {}  # arac_no -> dict
+
+        for link in links:
+            href = await link.get_attribute("href") or ""
+            m = re.search(r'/detay/(\d+)/(.+)', href)
+            if not m:
                 continue
 
-        if not cards:
-            # Genel yaklaşım: sayfadaki tüm resimleri ve yakınındaki metinleri al
-            print("⚠️  Standart kart seçicisi bulunamadı. Genel tarama yapılıyor...")
-            cards = await page.query_selector_all("img")
-            used_selector = "img (fallback)"
+            arac_no = m.group(1)
+            slug = m.group(2)
 
-        print(f"✅ {len(cards)} eleman bulundu (seçici: {used_selector})\n")
+            if arac_no not in raw:
+                # Slug'dan bilgi cek: hasarli-oto-2025-bmw-x1-xdrive25e-15-245-m-sport
+                slug_parts = slug.replace("hasarli-oto-", "").split("-")
+                yil = slug_parts[0] if slug_parts and slug_parts[0].isdigit() else ""
 
-        # ---- 4. Sayfa HTML'ini kaydet (debug için) ----
-        html_content = await page.content()
-        debug_path = GALERI_DIR / "_debug_page.html"
-        with open(debug_path, "w", encoding="utf-8") as f:
-            f.write(html_content)
-        print(f"🔍 Debug HTML kaydedildi: {debug_path}\n")
+                # Marka ve model slug'dan
+                marka_model_slug = "-".join(slug_parts[1:]) if len(slug_parts) > 1 else ""
 
-        # ---- 5. Her karttan bilgi çıkar ----
-        print("📋 İlanlar taranıyor...\n")
+                raw[arac_no] = {
+                    "arac_no": arac_no,
+                    "baslik": "",
+                    "yil": yil,
+                    "slug": slug,
+                    "fiyat": "",
+                    "gorsel_url": "",
+                    "detay_url": urljoin(BASE_URL, href),
+                    "yerel_gorsel_yolu": None,
+                }
 
-        # Tüm sayfadaki metin bloklarını ve resimleri topla
-        all_text = await page.inner_text("body")
-        all_images = await page.query_selector_all("img")
+            entry = raw[arac_no]
 
-        image_data = []
-        for img in all_images:
-            src = await img.get_attribute("src")
-            alt = await img.get_attribute("alt") or ""
-            if src and not any(skip in src.lower() for skip in [
-                "logo", "icon", "favicon", "avatar", "placeholder",
-                "loading", "spinner", "banner"
-            ]):
-                full_src = urljoin(BASE_URL, src)
-                image_data.append({"src": full_src, "alt": alt})
+            # Kart ici metin
+            text = (await link.inner_text()).strip()
 
-        # Fiyat ve araç no pattern'leri
-        price_pattern = re.compile(r'[\d.]+\s*₺')
-        vehicle_no_pattern = re.compile(r'(?:Araç\s*No|araç\s*no|Vehicle\s*No)[:\s]*(\S+)', re.IGNORECASE)
+            # Baslik: en uzun anlamli metin (marka model iceren)
+            if text and text != "Incele" and text != "\u0130ncele" and len(text) > len(entry["baslik"]):
+                if not text.startswith("Bilinmiyor"):
+                    entry["baslik"] = text
 
-        # Sayfadaki tüm metin bloklarından araç bilgisi çıkar
-        text_elements = await page.query_selector_all(
-            "h1, h2, h3, h4, h5, p, span, div, a"
-        )
+            # Gorsel: kart icindeki img
+            img = await link.query_selector("img")
+            if img and not entry["gorsel_url"]:
+                src = await img.get_attribute("src") or ""
+                if src and "logo" not in src.lower() and "brand" not in src.lower() and "placeholder" not in src.lower():
+                    entry["gorsel_url"] = urljoin(BASE_URL, src)
 
-        # Araç markalarını ara
-        car_brands = [
-            "BMW", "MERCEDES", "AUDI", "VOLKSWAGEN", "FORD", "TOYOTA",
-            "HONDA", "HYUNDAI", "KIA", "RENAULT", "FIAT", "OPEL",
-            "PEUGEOT", "CITROEN", "VOLVO", "NISSAN", "MAZDA", "SKODA",
-            "SEAT", "DACIA", "MITSUBISHI", "SUZUKI", "JEEP", "LAND ROVER",
-            "RANGE ROVER", "PORSCHE", "CHEVROLET", "DODGE", "ISUZU",
-            "ALFA ROMEO", "LEXUS", "INFINITI", "MINI", "SMART", "TESLA",
-            "CUPRA", "MG", "BYD", "CHERY", "TOGG", "AMAROK", "RANGER",
-        ]
+        vehicles = list(raw.values())
 
-        detected_vehicles = []
-        for elem in text_elements:
-            try:
-                text = (await elem.inner_text()).strip()
-                if not text or len(text) < 5 or len(text) > 200:
-                    continue
-                text_upper = text.upper()
-                for brand in car_brands:
-                    if brand in text_upper and text not in [v["title"] for v in detected_vehicles]:
-                        detected_vehicles.append({
-                            "title": text,
-                            "brand": brand,
-                        })
-                        break
-            except Exception:
+        # Basliklari duzelt: bos olanlari slug'dan olustur
+        for v in vehicles:
+            if not v["baslik"]:
+                s = v["slug"].replace("hasarli-oto-", "").replace("-", " ").upper()
+                # Yili cikar
+                s = re.sub(r'^\d{4}\s+', '', s)
+                v["baslik"] = s.strip() or "Bilinmiyor"
+
+        print(f"  -> {len(vehicles)} benzersiz arac tespit edildi\n")
+
+        # 4) Gorselleri indir
+        print(f"[4/5] Gorseller indiriliyor...\n")
+        downloaded = 0
+        for v in vehicles:
+            if not v["gorsel_url"]:
                 continue
-
-        # Fiyatları topla
-        prices = price_pattern.findall(all_text)
-
-        # Araç numaralarını topla
-        vehicle_numbers = vehicle_no_pattern.findall(all_text)
-
-        # ---- 6. Sonuçları birleştir ----
-        for idx, vehicle in enumerate(detected_vehicles):
-            entry = {
-                "sira": idx + 1,
-                "baslik": vehicle["title"],
-                "marka": vehicle["brand"],
-                "arac_no": vehicle_numbers[idx] if idx < len(vehicle_numbers) else None,
-                "fiyat": prices[idx] if idx < len(prices) else None,
-                "gorsel_url": image_data[idx]["src"] if idx < len(image_data) else None,
-                "yerel_gorsel_yolu": None,
-            }
-            results.append(entry)
-
-        # ---- 7. Görselleri indir ----
-        print(f"\n📸 {len(results)} araç bulundu. Görseller indiriliyor...\n")
-
-        for entry in results:
-            if not entry["gorsel_url"]:
-                continue
-
-            # Dosya adı: araç_no veya başlıktan temizle
-            safe_name = entry["arac_no"] or entry["baslik"]
-            safe_name = re.sub(r'[^\w\s-]', '', safe_name).strip()
-            safe_name = re.sub(r'[\s]+', '_', safe_name)[:80]
-            filename = f"{safe_name}.jpg"
+            filename = f"arac_{v['arac_no']}.jpg"
             filepath = GALERI_DIR / filename
-
             try:
-                response = await page.request.get(entry["gorsel_url"])
+                response = await page.request.get(v["gorsel_url"])
                 if response.ok:
                     img_bytes = await response.body()
                     with open(filepath, "wb") as f:
                         f.write(img_bytes)
-                    entry["yerel_gorsel_yolu"] = str(filepath)
-                    print(f"  ✅ İndirildi: {filename}")
-                else:
-                    print(f"  ❌ İndirilemedi ({response.status}): {entry['gorsel_url']}")
-            except Exception as e:
-                print(f"  ❌ Hata: {e}")
+                    v["yerel_gorsel_yolu"] = str(filepath)
+                    downloaded += 1
+                    if downloaded % 10 == 0:
+                        print(f"  {downloaded} gorsel indirildi...")
+            except Exception:
+                pass
 
-        # ---- 8. Ekstra: Eğer hiç sonuç bulunamadıysa, ham veri kaydet ----
-        if not results:
-            print("\n⚠️  Otomatik ayrıştırma ile araç bulunamadı.")
-            print("   Debug HTML dosyasını inceleyerek CSS seçicilerini güncelleyin.")
-
-            # Ham görsel ve metin verilerini de kaydet
-            raw_data = {
-                "bulunan_gorseller": image_data[:20],
-                "bulunan_fiyatlar": prices[:20],
-                "bulunan_arac_nolari": vehicle_numbers[:20],
-                "sayfa_metin_ornegi": all_text[:2000],
-            }
-            raw_path = GALERI_DIR / "_ham_veri.json"
-            with open(raw_path, "w", encoding="utf-8") as f:
-                json.dump(raw_data, f, ensure_ascii=False, indent=2)
-            print(f"   Ham veri kaydedildi: {raw_path}")
+        print(f"  Toplam {downloaded} gorsel indirildi.\n")
 
         await browser.close()
 
-    return results
+    # 5) Temiz sonuclari olustur
+    results = []
+    for idx, v in enumerate(vehicles, 1):
+        results.append({
+            "sira": idx,
+            "arac_no": v["arac_no"],
+            "baslik": v["baslik"],
+            "yil": v["yil"],
+            "fiyat": v["fiyat"] or "Uye girisi gerekli",
+            "gorsel_url": v["gorsel_url"],
+            "detay_url": v["detay_url"],
+            "yerel_gorsel_yolu": v["yerel_gorsel_yolu"],
+        })
 
-
-# ============================================================
-# Sonuçları JSON'a Kaydet ve Ekrana Yazdır
-# ============================================================
-
-def save_and_display(results):
-    """Sonuçları JSON dosyasına kaydeder ve terminale yazdırır."""
-
+    # JSON kaydet
     output_path = Path("aksamoto_ilanlar.json")
-
-    # JSON dosyasına kaydet
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    print(f"\n{'='*60}")
-    print(f"📊 SONUÇ: {len(results)} araç ilanı çekildi")
-    print(f"📁 JSON dosyası: {output_path}")
-    print(f"🖼️  Görseller: aksamoto_galeri/")
-    print(f"{'='*60}\n")
+    # Ekrana yazdir
+    print("=" * 60)
+    print(f"  SONUC: {len(results)} arac ilani cekildi")
+    print(f"  JSON  : {output_path}")
+    print(f"  Galeri: {GALERI_DIR}/ ({downloaded} gorsel)")
+    print("=" * 60 + "\n")
 
-    # Ekrana temiz çıktı
-    for entry in results:
-        print(f"🚗 {entry['baslik']}")
-        print(f"   Marka    : {entry['marka']}")
-        print(f"   Araç No  : {entry['arac_no'] or 'Bilinmiyor'}")
-        print(f"   Fiyat    : {entry['fiyat'] or 'Bilinmiyor'}")
-        print(f"   Görsel   : {entry['yerel_gorsel_yolu'] or entry['gorsel_url'] or 'Yok'}")
+    for e in results:
+        img_ok = "+" if e["yerel_gorsel_yolu"] else "-"
+        print(f"  [{e['sira']:02d}] [{img_ok}] {e['baslik']}")
+        print(f"       No: {e['arac_no']}  |  Yil: {e['yil'] or '-'}")
+        print(f"       {e['detay_url']}")
         print()
 
     return results
 
 
-# ============================================================
-# Ana Çalıştırıcı
-# ============================================================
-
 if __name__ == "__main__":
-    print("""
-╔══════════════════════════════════════════════════╗
-║   AKSAM OTOMOTİV - ARAÇ İLAN SCRAPER            ║
-║   aksamoto.com.tr                                ║
-╚══════════════════════════════════════════════════╝
-    """)
-
-    results = asyncio.run(scrape_with_playwright())
-    save_and_display(results)
+    asyncio.run(scrape())
