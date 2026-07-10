@@ -64,6 +64,37 @@ class AppController {
     lucide.createIcons();
     this.bindEvents();
     this.renderGarage();
+    this.renderDashboardListings();
+  }
+
+  renderDashboardListings() {
+    const container = document.getElementById('dashboard-listings');
+    if (!container) return;
+
+    // Show first 6 vehicles on dashboard
+    const featured = this.garageData.slice(0, 6);
+    let html = '';
+    featured.forEach(car => {
+      html += `
+        <div class="garage-item glass-panel" onclick="window.open('${car.detayUrl}', '_blank')">
+          <div class="g-image" style="background-image: url('${car.img}')">
+            <div class="g-pill scan-status hasar-orta">${car.year}</div>
+          </div>
+          <div class="g-content">
+            <h3 class="g-title">${car.brand} ${car.model}</h3>
+            <p class="g-meta"><i data-lucide="hash" class="icon-xs"></i> ${car.aracNo} | <i data-lucide="calendar" class="icon-xs"></i> ${car.year}</p>
+            <div class="g-prices">
+              <div class="g-price-box">
+                <span class="g-price-label">aksamoto.com.tr</span>
+                <span class="g-price-val primary" style="font-size: 0.85rem;">Detay İçin Tıklayın →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    container.innerHTML = html;
+    lucide.createIcons();
   }
 
   bindEvents() {
