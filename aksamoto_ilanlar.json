@@ -1,602 +1,482 @@
 [
   {
     "sira": 1,
-    "arac_no": "201737654",
-    "baslik": "BMW X1 XDRIVE25e 1.5 245 M SPORT",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/04/28/y2287348_20260428143107.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201737654/hasarli-oto-2025-bmw-x1-xdrive25e-15-245-m-sport",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201737654.jpg"
+    "arac_no": "201720132",
+    "baslik": "VOLKSWAGEN VOLKSWAGEN PASSAT 1.5 TSI ACT 150 PS BUSINESS DSG",
+    "yil": "2022",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/09/y7556352_20260709103815.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201720132/hasarli-oto-2022-volkswagen-volkswagen-passat-15-tsi-act-150-ps-business-dsg"
   },
   {
     "sira": 2,
-    "arac_no": "201740780",
-    "baslik": "VOLKSWAGEN AMAROK STYLE PLUS 4MOTION 2.0 TDI 205 OV",
-    "yil": "2023",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/26/y4812621_20260626094931.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201740780/hasarli-oto-2023-volkswagen-amarok-style-plus-4motion-20-tdi-205-ov",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201740780.jpg"
+    "arac_no": "201738749",
+    "baslik": "FORD TRANSIT CUSTOM VAN 320S EB UPG 136 TREND",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/05/y2394343_20260805095239.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201738749/hasarli-oto-2025-ford-transit-custom-van-320s-eb-upg-136-trend"
   },
   {
     "sira": 3,
-    "arac_no": "201740847",
-    "baslik": "FORD RANGER XLT 4x4 2.0 ECOBLUE 170 10A/T",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/03/17/y5467257_20260317085632.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201740847/hasarli-oto-2025-ford-ranger-xlt-4x4-20-ecoblue-170-10a-t",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201740847.jpg"
-  },
-  {
-    "sira": 4,
-    "arac_no": "201742359",
-    "baslik": "FORD RANGER WILDTRAK 4x4 2.0 ECOBLUE 205 10AT",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/03/y7728495_20260703100355.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201742359/hasarli-oto-2024-ford-ranger-wildtrak-4x4-20-ecoblue-205-10at",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201742359.jpg"
-  },
-  {
-    "sira": 5,
-    "arac_no": "201743217",
-    "baslik": "TOFAS-FIAT EGEA SEDAN EASY 1.3 M.JET 95 E6D",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/23/y1329095_20260623115658.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201743217/hasarli-oto-2024-tofas-fiat-egea-sedan-easy-13-mjet-95-e6d",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201743217.jpg"
-  },
-  {
-    "sira": 6,
-    "arac_no": "201743534",
-    "baslik": "CITROEN C3 1.4 VTI (95) CONFORT BMP",
-    "yil": "2012",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/01/y1191069_20260701165034.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201743534/hasarli-oto-2012-citroen-c3-14-vti-95-confort-bmp",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201743534.jpg"
-  },
-  {
-    "sira": 7,
-    "arac_no": "201744154",
-    "baslik": "TOYOTA HILUX 2.4 D-4D 150 HI-CRUISER A T",
-    "yil": "2022",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/03/y6687383_20260603134207.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201744154/hasarli-oto-2022-toyota-hilux-24-d-4d-150-hi-cruiser-a-t",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201744154.jpg"
-  },
-  {
-    "sira": 8,
     "arac_no": "201744206",
     "baslik": "SEAT ARONA 1.0 ECOTSI 110 DSG S S XCELLENCE",
     "yil": "2021",
-    "fiyat": "Uye girisi gerekli",
     "gorsel_url": "https://images.aksamoto.com.tr/2026/06/27/y961819_20260627091335.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201744206/hasarli-oto-2021-seat-arona-10-ecotsi-110-dsg-s-s-xcellence",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201744206.jpg"
+    "detay_url": "https://aksamoto.com.tr/detay/201744206/hasarli-oto-2021-seat-arona-10-ecotsi-110-dsg-s-s-xcellence"
   },
   {
-    "sira": 9,
+    "sira": 4,
     "arac_no": "201745904",
     "baslik": "TOYOTA COROLLA SEDAN 1.6 COMFORT EXT",
     "yil": "2011",
-    "fiyat": "Uye girisi gerekli",
     "gorsel_url": "https://images.aksamoto.com.tr/2026/06/22/y7497245_20260622110744.jpg",
-    "detay_url": "https://aksamoto.com.tr/detay/201745904/hasarli-oto-2011-toyota-corolla-sedan-16-comfort-ext",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201745904.jpg"
+    "detay_url": "https://aksamoto.com.tr/detay/201745904/hasarli-oto-2011-toyota-corolla-sedan-16-comfort-ext"
   },
   {
-    "sira": 10,
-    "arac_no": "201746307",
-    "baslik": "FIAT SCUDO VAN MAXI L3 BUSINESS MJET3 2.0 145",
+    "sira": 5,
+    "arac_no": "201748114",
+    "baslik": "FOTON TUNLAND G7 FLAGSHIP",
     "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/05/11/y6799785_20260511110754.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201746307/hasarli-oto-2025-fiat-scudo-van-maxi-l3-business-mjet3-20-145",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201746307.jpg"
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/03/y6188772_20260803093858.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201748114/hasarli-oto-2025-foton-tunland-g7-flagship"
   },
   {
-    "sira": 11,
-    "arac_no": "201746346",
-    "baslik": "PEUGEOT PARTNER VAN UZUN COMFORT 1.5 BLUEHDI 100 S&S",
-    "yil": "2023",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/03/y567733_20260703103759.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201746346/hasarli-oto-2023-peugeot-partner-van-uzun-comfort-15-bluehdi-100-ss",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201746346.jpg"
-  },
-  {
-    "sira": 12,
-    "arac_no": "201746769",
-    "baslik": "BYD SEAL U DM-İ",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/04/24/y697203_20260424102832.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201746769/hasarli-oto-2025-byd-seal-u-dm-i",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201746769.jpg"
-  },
-  {
-    "sira": 13,
-    "arac_no": "201747235",
-    "baslik": "FORD FOCUS III MCA STYLE 1.6 125 4K",
-    "yil": "2014",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/03/y4928245_20260603134518.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201747235/hasarli-oto-2014-ford-focus-iii-mca-style-16-125-4k",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201747235.jpg"
-  },
-  {
-    "sira": 14,
-    "arac_no": "201747327",
-    "baslik": "PEUGEOT RIFTER ALLURE 1.5 BLUEHDI 100",
-    "yil": "2020",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/09/y258084_20260609155607.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201747327/hasarli-oto-2020-peugeot-rifter-allure-15-bluehdi-100",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201747327.jpg"
-  },
-  {
-    "sira": 15,
-    "arac_no": "201747457",
-    "baslik": "OPEL ASTRA HB CLASSIC 1.6i 16V ESSEN.CONFOR E",
-    "yil": "2012",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/01/y2204695_20260701091750.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201747457/hasarli-oto-2012-opel-astra-hb-classic-16i-16v-essenconfor-e",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201747457.jpg"
-  },
-  {
-    "sira": 16,
-    "arac_no": "201747704",
-    "baslik": "FORD FOCUS TITANIUM X 4K 1.5 ECOBLUE 115 8AT",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/16/y544637_20260616090842.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201747704/hasarli-oto-2024-ford-focus-titanium-x-4k-15-ecoblue-115-8at",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201747704.jpg"
-  },
-  {
-    "sira": 17,
-    "arac_no": "201747767",
-    "baslik": "TOGG T10X V2 RWD UZUN MENZIL 160KW",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/09/y3932305_20260609163919.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201747767/hasarli-oto-2025-togg-t10x-v2-rwd-uzun-menzil-160kw",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201747767.jpg"
-  },
-  {
-    "sira": 18,
+    "sira": 6,
     "arac_no": "201748118",
     "baslik": "RENAULT ESPACE 3.0 DCI OV",
     "yil": "2006",
-    "fiyat": "Uye girisi gerekli",
     "gorsel_url": "https://images.aksamoto.com.tr/2026/06/27/y2169805_20260627092634.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201748118/hasarli-oto-2006-renault-espace-30-dci-ov",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201748118.jpg"
+    "detay_url": "https://aksamoto.com.tr/detay/201748118/hasarli-oto-2006-renault-espace-30-dci-ov"
   },
   {
-    "sira": 19,
-    "arac_no": "201748188",
-    "baslik": "FORD RANGER WILDTRAK 4x4 2.0 ECOBLUE 205 10AT",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/16/y1075246_20260616085915.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201748188/hasarli-oto-2024-ford-ranger-wildtrak-4x4-20-ecoblue-205-10at",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201748188.jpg"
-  },
-  {
-    "sira": 20,
-    "arac_no": "201748610",
-    "baslik": "SKODA OCTAVIA PREMIUM 1.5 TSI ACT e-TEC 150 DSG",
-    "yil": "2023",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/01/y4236832_20260701091701.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201748610/hasarli-oto-2023-skoda-octavia-premium-15-tsi-act-e-tec-150-dsg",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201748610.jpg"
-  },
-  {
-    "sira": 21,
-    "arac_no": "201748934",
-    "baslik": "SKODA SCALA 1.0 TSI 110 DSG PREMIUM",
-    "yil": "2023",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/24/y4604716_20260624103237.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201748934/hasarli-oto-2023-skoda-scala-10-tsi-110-dsg-premium",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201748934.jpg"
-  },
-  {
-    "sira": 22,
-    "arac_no": "201749579",
-    "baslik": "VOLKSWAGEN JETTA 1.4 TSI (122) COMFORTLINE DSG",
-    "yil": "2015",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/22/y2297065_20260622164755.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201749579/hasarli-oto-2015-volkswagen-jetta-14-tsi-122-comfortline-dsg",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201749579.jpg"
-  },
-  {
-    "sira": 23,
-    "arac_no": "201750053",
-    "baslik": "PEUGEOT BOXER MINIBIS 16+1 L4H2 2.2 BLUEHDI 140 15M3 4.2T FL",
+    "sira": 7,
+    "arac_no": "201748758",
+    "baslik": "FIAT DOBLO COMBI EASY 1.2 110 PURETECH FL",
     "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/19/y1083581_20260619091745.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201750053/hasarli-oto-2025-peugeot-boxer-minibis-16-1-l4h2-22-bluehdi-140-15m3-42t-fl",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201750053.jpg"
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/07/y2437553_20260807085434.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201748758/hasarli-oto-2025-fiat-doblo-combi-easy-12-110-puretech-fl"
   },
   {
-    "sira": 24,
-    "arac_no": "201750155",
-    "baslik": "DACIA DUSTER COMFORT 1.5 DCI 4X4 (110)",
-    "yil": "2018",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/30/y6743548_20260630153433.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201750155/hasarli-oto-2018-dacia-duster-comfort-15-dci-4x4-110",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201750155.jpg"
+    "sira": 8,
+    "arac_no": "201748875",
+    "baslik": "RENAULT CLIO EVOLUTION 1.0 TCE X-TRONIC 90",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/31/y4584344_20260731092931.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201748875/hasarli-oto-2025-renault-clio-evolution-10-tce-x-tronic-90"
   },
   {
-    "sira": 25,
+    "sira": 9,
+    "arac_no": "201749226",
+    "baslik": "FORD TOURNEO COURIER 1.5 D 100 TREND",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/03/y1317420_20260803154435.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201749226/hasarli-oto-2025-ford-tourneo-courier-15-d-100-trend"
+  },
+  {
+    "sira": 10,
+    "arac_no": "201750190",
+    "baslik": "FORD RANGER XLT 4x4 2.0 ECOBLUE 170 10A/T",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/21/y5529035_20260721125747.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201750190/hasarli-oto-2024-ford-ranger-xlt-4x4-20-ecoblue-170-10a-t"
+  },
+  {
+    "sira": 11,
     "arac_no": "201750756",
     "baslik": "CHERY TIGGO 7 PRO MAX EXCEPTIONAL",
     "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
     "gorsel_url": "https://images.aksamoto.com.tr/2026/06/19/y2076736_20260619091241.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201750756/hasarli-oto-2025-chery-tiggo-7-pro-max-exceptional",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201750756.jpg"
+    "detay_url": "https://aksamoto.com.tr/detay/201750756/hasarli-oto-2025-chery-tiggo-7-pro-max-exceptional"
   },
   {
-    "sira": 26,
-    "arac_no": "201750769",
-    "baslik": "RENAULT LATITUDE PRIVILEGE 1.5 DCI 110 E5",
-    "yil": "2013",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/30/y3399213_20260630084608.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201750769/hasarli-oto-2013-renault-latitude-privilege-15-dci-110-e5",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201750769.jpg"
+    "sira": 12,
+    "arac_no": "201750896",
+    "baslik": "VOLKSWAGEN PASSAT ALLTRACK 2.0 TDI 200 SCR 4M DSG",
+    "yil": "2022",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/05/y5500671_20260805095205.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201750896/hasarli-oto-2022-volkswagen-passat-alltrack-20-tdi-200-scr-4m-dsg"
   },
   {
-    "sira": 27,
-    "arac_no": "201750784",
-    "baslik": "FORD TRAN.ICA3 350L VAN 11.5M3 2.0 170UZUNTREND",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/16/y3769496_20260616151342.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201750784/hasarli-oto-2024-ford-tranica3-350l-van-115m3-20-170uzuntrend",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201750784.jpg"
-  },
-  {
-    "sira": 28,
+    "sira": 13,
     "arac_no": "201751093",
     "baslik": "BYD SEAL U EV",
     "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
     "gorsel_url": "https://images.aksamoto.com.tr/2026/06/26/y3139035_20260626092047.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751093/hasarli-oto-2025-byd-seal-u-ev",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751093.jpg"
+    "detay_url": "https://aksamoto.com.tr/detay/201751093/hasarli-oto-2025-byd-seal-u-ev"
   },
   {
-    "sira": 29,
-    "arac_no": "201751139",
-    "baslik": "RENAULT CEKICI T 520 HIGHCAB 4X2 T E6 RET ADR (EVO)",
+    "sira": 14,
+    "arac_no": "201751677",
+    "baslik": "FORD TRAN.ICA3 350M KNET C.K 2.0 165 ORTATRENDKAS",
     "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/01/y3702620_20260701092619.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751139/hasarli-oto-2025-renault-cekici-t-520-highcab-4x2-t-e6-ret-adr-evo",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751139.jpg"
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/05/y360668_20260805095121.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201751677/hasarli-oto-2025-ford-tranica3-350m-knet-ck-20-165-ortatrendkas"
   },
   {
-    "sira": 30,
-    "arac_no": "201751179",
-    "baslik": "FIAT DUCATO VAN MAXI 17M3 2.2 140 S9",
+    "sira": 15,
+    "arac_no": "201753285",
+    "baslik": "FIAT EGEA SEDAN EASY 1.6 M.JET 130 GSR",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/30/y2234932_20260730090006.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201753285/hasarli-oto-2025-fiat-egea-sedan-easy-16-mjet-130-gsr"
+  },
+  {
+    "sira": 16,
+    "arac_no": "201753501",
+    "baslik": "SUZUKI VITARA MILD HYBRID 1.4 129 ELEGANCE 4X2 AT",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/28/y3981024_20260728090756.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201753501/hasarli-oto-2024-suzuki-vitara-mild-hybrid-14-129-elegance-4x2-at"
+  },
+  {
+    "sira": 17,
+    "arac_no": "201754540",
+    "baslik": "FIAT EGEA CROSS LOUNGE 1.6 M.JET 130DCTGSR TRAC+",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/06/y1313337_20260806090717.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201754540/hasarli-oto-2025-fiat-egea-cross-lounge-16-mjet-130dctgsr-trac-"
+  },
+  {
+    "sira": 18,
+    "arac_no": "201754557",
+    "baslik": "MOTORSIKLET HONDA NT 1100 DCT",
     "yil": "2023",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/01/y2110783_20260701092245.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751179/hasarli-oto-2023-fiat-ducato-van-maxi-17m3-22-140-s9",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751179.jpg"
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/28/y7528940_20260728093500.jpg",
+    "detay_url": "https://aksamoto.com.tr/detay/201754557/hasarli-oto-2023-motorsiklet-honda-nt-1100-dct"
   },
   {
-    "sira": 31,
-    "arac_no": "201751265",
-    "baslik": "SKODA FABIA 1.2 TSI 110 DSG GREEN TEC STYLE",
-    "yil": "2016",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/19/y805678_20260619091144.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751265/hasarli-oto-2016-skoda-fabia-12-tsi-110-dsg-green-tec-style",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751265.jpg"
-  },
-  {
-    "sira": 32,
-    "arac_no": "201751308",
-    "baslik": "RENAULT CLIO HB 1.5 DCI",
-    "yil": "2017",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/02/y1626274_20260602094851.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751308/hasarli-oto-2017-renault-clio-hb-15-dci",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751308.jpg"
-  },
-  {
-    "sira": 33,
-    "arac_no": "201751480",
-    "baslik": "VOLKSWAGEN TRANSPORTER CITY VAN 2.0 5+1 UZUN 150 DSG",
+    "sira": 19,
+    "arac_no": "201754648",
+    "baslik": "FORD TOURNEO COURIER 1.0 P 125 AT DELUXE",
     "yil": "2026",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/08/y6517604_20260708160946.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751480/hasarli-oto-2026-volkswagen-transporter-city-van-20-5-1-uzun-150-dsg",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751480.jpg"
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/31/y5725921_20260731142441.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201754648/hasarli-oto-2026-ford-tourneo-courier-10-p-125-at-deluxe"
   },
   {
-    "sira": 34,
-    "arac_no": "201751530",
-    "baslik": "SKODA OCTAVIA PREMIUM 1.5 TSI MHEV 150 DSG FL",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/22/y4722780_20260622110713.jpg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751530/hasarli-oto-2024-skoda-octavia-premium-15-tsi-mhev-150-dsg-fl",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751530.jpg"
-  },
-  {
-    "sira": 35,
-    "arac_no": "201751766",
-    "baslik": "HYUNDAI KONA 1.6 CRDI ELITE SMART DCT",
-    "yil": "2020",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/29/y7315690_20260629100838.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751766/hasarli-oto-2020-hyundai-kona-16-crdi-elite-smart-dct",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751766.jpg"
-  },
-  {
-    "sira": 36,
-    "arac_no": "201751846",
-    "baslik": "VOLKSWAGEN AMAROK 2.0 BiTDI 180 HIGHLINE 4x4 OV",
-    "yil": "2017",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/23/y3661694_20260623093519.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751846/hasarli-oto-2017-volkswagen-amarok-20-bitdi-180-highline-4x4-ov",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751846.jpg"
-  },
-  {
-    "sira": 37,
-    "arac_no": "201751988",
-    "baslik": "DACIA DUSTER EXPRESSION TCE 150 4x4",
-    "yil": "2023",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/22/y4756371_20260622164636.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751988/hasarli-oto-2023-dacia-duster-expression-tce-150-4x4",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751988.jpg"
-  },
-  {
-    "sira": 38,
-    "arac_no": "201751991",
-    "baslik": "FORD TRANSIT 15+1 MINIBUS 2.0",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/23/y6384180_20260623115231.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201751991/hasarli-oto-2024-ford-transit-15-1-minibus-20",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201751991.jpg"
-  },
-  {
-    "sira": 39,
-    "arac_no": "201752013",
-    "baslik": "BMW X1 XDRIVE25E 1.5 245 M SPORT",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/16/y5075860_20260616085514.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201752013/hasarli-oto-2025-bmw-x1-xdrive25e-15-245-m-sport",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201752013.jpg"
-  },
-  {
-    "sira": 40,
-    "arac_no": "201752901",
-    "baslik": "OPEL FRONTERA-E 83 KW GS",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/16/y3252396_20260616085711.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201752901/hasarli-oto-2025-opel-frontera-e-83-kw-gs",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201752901.jpg"
-  },
-  {
-    "sira": 41,
-    "arac_no": "201753024",
-    "baslik": "PEUGEOT PARTNER 2.0 HDI ADVENTURE",
-    "yil": "2007",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/27/y7244018_20260627091426.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753024/hasarli-oto-2007-peugeot-partner-20-hdi-adventure",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753024.jpg"
-  },
-  {
-    "sira": 42,
-    "arac_no": "201753034",
-    "baslik": "TOYOTA COROLLA HYBRID 1.8 DREAM E-CVT FL",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/24/y2862479_20260624143219.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753034/hasarli-oto-2025-toyota-corolla-hybrid-18-dream-e-cvt-fl",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753034.jpg"
-  },
-  {
-    "sira": 43,
-    "arac_no": "201753070",
-    "baslik": "DACIA DUSTER COMFORT 1.5 BLUEDCI 115 4X4 E6DFULL",
-    "yil": "2021",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/27/y5780216_20260627094433.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753070/hasarli-oto-2021-dacia-duster-comfort-15-bluedci-115-4x4-e6dfull",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753070.jpg"
-  },
-  {
-    "sira": 44,
-    "arac_no": "201753079",
-    "baslik": "BMW 320I SEDAN 1.6 170 M SPORT",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/03/y3738675_20260703161300.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753079/hasarli-oto-2024-bmw-320i-sedan-16-170-m-sport",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753079.jpg"
-  },
-  {
-    "sira": 45,
-    "arac_no": "201753080",
-    "baslik": "VOLVO EX40 S.MOTOR EXT.RNG ULT. BLACK E.ULT 150KW",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/23/y7377222_20260623115114.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753080/hasarli-oto-2025-volvo-ex40-smotor-extrng-ult-black-eult-150kw",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753080.jpg"
-  },
-  {
-    "sira": 46,
-    "arac_no": "201753183",
-    "baslik": "HYUNDAI BAYON FL 1.0 T-GDI 100 STYLE DCT",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/30/y7500190_20260630155352.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753183/hasarli-oto-2025-hyundai-bayon-fl-10-t-gdi-100-style-dct",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753183.jpg"
-  },
-  {
-    "sira": 47,
-    "arac_no": "201753282",
-    "baslik": "RENAULT MEGANE SEDAN TOUCH 1.5 DCI EDC 110",
-    "yil": "2018",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/27/y7428927_20260627091655.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753282/hasarli-oto-2018-renault-megane-sedan-touch-15-dci-edc-110",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753282.jpg"
-  },
-  {
-    "sira": 48,
-    "arac_no": "201753390",
-    "baslik": "SKODA OCTAVIA PREMIUM 1.5 TSI MHEV 150 DSG FL",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/06/y217504_20260706103733.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753390/hasarli-oto-2025-skoda-octavia-premium-15-tsi-mhev-150-dsg-fl",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753390.jpg"
-  },
-  {
-    "sira": 49,
-    "arac_no": "201753394",
-    "baslik": "HYUNDAI KONA FL 1.6T-GDI ELITE SMART DCT",
-    "yil": "2020",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/23/y5973347_20260623115003.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753394/hasarli-oto-2020-hyundai-kona-fl-16t-gdi-elite-smart-dct",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753394.jpg"
-  },
-  {
-    "sira": 50,
-    "arac_no": "201753514",
-    "baslik": "FORD FOCUS III STYLE 1.6 TDCi (115) 5K",
-    "yil": "2012",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/22/y2297224_20260622164537.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753514/hasarli-oto-2012-ford-focus-iii-style-16-tdci-115-5k",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753514.jpg"
-  },
-  {
-    "sira": 51,
-    "arac_no": "201753521",
-    "baslik": "PEUGEOT RIFTER ALLURE 1.5 BLUEHDI 100 6MT E6.3",
-    "yil": "2021",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/24/y6744247_20260624143316.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201753521/hasarli-oto-2021-peugeot-rifter-allure-15-bluehdi-100-6mt-e63",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201753521.jpg"
-  },
-  {
-    "sira": 52,
-    "arac_no": "201754416",
-    "baslik": "FIAT SCUDO VAN MAXI L3 BUSINESS MJET3 1.5 120",
-    "yil": "2026",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/29/y2417810_20260629124158.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201754416/hasarli-oto-2026-fiat-scudo-van-maxi-l3-business-mjet3-15-120",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201754416.jpg"
-  },
-  {
-    "sira": 53,
-    "arac_no": "201754839",
-    "baslik": "NISSAN QASHQAI 1.2 TURBO VISIA X-TRONIC",
-    "yil": "2014",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/22/y2988682_20260622164442.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201754839/hasarli-oto-2014-nissan-qashqai-12-turbo-visia-x-tronic",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201754839.jpg"
-  },
-  {
-    "sira": 54,
-    "arac_no": "201755002",
-    "baslik": "HONDA CITY 4D 1.5 EXECUTIVE AT",
-    "yil": "2021",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/08/y5889243_20260708122541.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755002/hasarli-oto-2021-honda-city-4d-15-executive-at",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755002.jpg"
-  },
-  {
-    "sira": 55,
-    "arac_no": "201755015",
-    "baslik": "HONDA CIVIC SEDAN 1.6 125 PREMIUM EC",
-    "yil": "2014",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/18/y4911292_20260618172916.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755015/hasarli-oto-2014-honda-civic-sedan-16-125-premium-ec",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755015.jpg"
-  },
-  {
-    "sira": 56,
-    "arac_no": "201755062",
-    "baslik": "MERCEDES EQB 250+ NIGHT EDITION FL",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/02/y4386507_20260702162941.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755062/hasarli-oto-2025-mercedes-eqb-250-night-edition-fl",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755062.jpg"
-  },
-  {
-    "sira": 57,
-    "arac_no": "201755127",
-    "baslik": "VOLKSWAGEN PASSAT VARIANT 1.6 TDI BMT 105",
-    "yil": "2012",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/03/y1005760_20260703100250.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755127/hasarli-oto-2012-volkswagen-passat-variant-16-tdi-bmt-105",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755127.jpg"
-  },
-  {
-    "sira": 58,
-    "arac_no": "201755194",
-    "baslik": "MERCEDES EQS 450 4MATIC INSPIRATION",
-    "yil": "2025",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/25/y677337_20260625091206.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755194/hasarli-oto-2025-mercedes-eqs-450-4matic-inspiration",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755194.jpg"
-  },
-  {
-    "sira": 59,
-    "arac_no": "201755323",
-    "baslik": "TOYOTA PROACE CITY 1.5 D 130 PASSION X-PACK A/T",
-    "yil": "2024",
-    "fiyat": "Uye girisi gerekli",
-    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/06/y721118_20260706103653.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755323/hasarli-oto-2024-toyota-proace-city-15-d-130-passion-x-pack-a-t",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755323.jpg"
-  },
-  {
-    "sira": 60,
+    "sira": 20,
     "arac_no": "201755517",
     "baslik": "CITROEN C4 1.6 e HDI (112) CONFORT MCP",
     "yil": "2012",
-    "fiyat": "Uye girisi gerekli",
     "gorsel_url": "https://images.aksamoto.com.tr/2026/07/01/y331653_20260701103943.jpeg",
-    "detay_url": "https://aksamoto.com.tr/detay/201755517/hasarli-oto-2012-citroen-c4-16-e-hdi-112-confort-mcp",
-    "yerel_gorsel_yolu": "aksamoto_galeri\\arac_201755517.jpg"
+    "detay_url": "https://aksamoto.com.tr/detay/201755517/hasarli-oto-2012-citroen-c4-16-e-hdi-112-confort-mcp"
+  },
+  {
+    "sira": 21,
+    "arac_no": "201756449",
+    "baslik": "RENAULT CLIO TOUCH 1.3 TCE EDC 130",
+    "yil": "2020",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/31/y4492727_20260731092723.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201756449/hasarli-oto-2020-renault-clio-touch-13-tce-edc-130"
+  },
+  {
+    "sira": 22,
+    "arac_no": "201756619",
+    "baslik": "FORD FORD TOURNEOCOURIERJOURNEY 1.5 TDCI 100 E6.2 TREND",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/05/y5354072_20260805095025.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201756619/hasarli-oto-2023-ford-ford-tourneocourierjourney-15-tdci-100-e62-trend"
+  },
+  {
+    "sira": 23,
+    "arac_no": "201756798",
+    "baslik": "VOLKSWAGEN T-CROSS 1.0 TSI 110 STYLE DSG",
+    "yil": "2022",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/04/y4309893_20260804090623.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201756798/hasarli-oto-2022-volkswagen-t-cross-10-tsi-110-style-dsg"
+  },
+  {
+    "sira": 24,
+    "arac_no": "201756904",
+    "baslik": "RENAULT KANGOO EXPRESS CARGO MAXI JOY 1.5 BLUEDCI 95",
+    "yil": "2019",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/20/y4535963_20260720100002.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201756904/hasarli-oto-2019-renault-kangoo-express-cargo-maxi-joy-15-bluedci-95"
+  },
+  {
+    "sira": 25,
+    "arac_no": "201757106",
+    "baslik": "MERCEDES CLA 200 FL 1.33 163 AMG 7G-DCT",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/05/y344814_20260805094733.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757106/hasarli-oto-2025-mercedes-cla-200-fl-133-163-amg-7g-dct"
+  },
+  {
+    "sira": 26,
+    "arac_no": "201757403",
+    "baslik": "OPEL MOKKA 1.2 130 AT8 ULTIMATE",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/30/y90182_20260630155653.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757403/hasarli-oto-2023-opel-mokka-12-130-at8-ultimate"
+  },
+  {
+    "sira": 27,
+    "arac_no": "201757474",
+    "baslik": "SUBARU SOLTERRA E-XCELLENT",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/06/24/y4121308_20260624100719.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757474/hasarli-oto-2023-subaru-solterra-e-xcellent"
+  },
+  {
+    "sira": 28,
+    "arac_no": "201757634",
+    "baslik": "FIAT FIORINO 1.3 CARGO PLUS",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/07/y4189920_20260807090547.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757634/hasarli-oto-2024-fiat-fiorino-13-cargo-plus"
+  },
+  {
+    "sira": 29,
+    "arac_no": "201757681",
+    "baslik": "RENAULT CEKICI T 520",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/04/y2244051_20260804085445.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757681/hasarli-oto-2024-renault-cekici-t-520"
+  },
+  {
+    "sira": 30,
+    "arac_no": "201757810",
+    "baslik": "ISUZU D-MAX CIFT KABIN KAMYONET 1.9 4x2 V-LIFE AT",
+    "yil": "2020",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/28/y309493_20260728155841.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757810/hasarli-oto-2020-isuzu-d-max-cift-kabin-kamyonet-19-4x2-v-life-at"
+  },
+  {
+    "sira": 31,
+    "arac_no": "201757933",
+    "baslik": "RENAULT MEGANE SEDAN TOUCH 1.3 TCE EDC 140 FAZ2",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/07/y6435780_20260807090725.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201757933/hasarli-oto-2025-renault-megane-sedan-touch-13-tce-edc-140-faz2"
+  },
+  {
+    "sira": 32,
+    "arac_no": "201758090",
+    "baslik": "RENAULT RAFALE ESPRIT ALPINE E-TECH F.HYBRID 200",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/02/y1278085_20260702163216.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758090/hasarli-oto-2025-renault-rafale-esprit-alpine-e-tech-fhybrid-200"
+  },
+  {
+    "sira": 33,
+    "arac_no": "201758240",
+    "baslik": "FIAT GRANDE PUNTO 3K 1.4 FIRE (77) ACTIVE",
+    "yil": "2009",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/27/y3738704_20260727105236.jpg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758240/hasarli-oto-2009-fiat-grande-punto-3k-14-fire-77-active"
+  },
+  {
+    "sira": 34,
+    "arac_no": "201758393",
+    "baslik": "SKODA SUPERB 1.5 TSI MHEV 150 DSG PRESTIGE FL",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/07/y4684069_20260707142000.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758393/hasarli-oto-2024-skoda-superb-15-tsi-mhev-150-dsg-prestige-fl"
+  },
+  {
+    "sira": 35,
+    "arac_no": "201758473",
+    "baslik": "CITROEN BERLINGO COMBI 1.6 HDI 92 SX",
+    "yil": "2014",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/17/y6671397_20260717085514.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758473/hasarli-oto-2014-citroen-berlingo-combi-16-hdi-92-sx"
+  },
+  {
+    "sira": 36,
+    "arac_no": "201758632",
+    "baslik": "CITROEN E-C5 AIRCROSS MAX 157 KW",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/30/y6340284_20260730085914.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758632/hasarli-oto-2025-citroen-e-c5-aircross-max-157-kw"
+  },
+  {
+    "sira": 37,
+    "arac_no": "201758705",
+    "baslik": "CITROEN JUMPY SPACETOURER L3 8+1 1.6 BLUEHDI 115 S&S",
+    "yil": "2017",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/16/y1093597_20260716120712.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758705/hasarli-oto-2017-citroen-jumpy-spacetourer-l3-8-1-16-bluehdi-115-ss"
+  },
+  {
+    "sira": 38,
+    "arac_no": "201758737",
+    "baslik": "RENAULT ZOE INTENSE R135",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/24/y3436403_20260724095607.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758737/hasarli-oto-2023-renault-zoe-intense-r135"
+  },
+  {
+    "sira": 39,
+    "arac_no": "201758748",
+    "baslik": "RENAULT MEGANE SEDAN TOUCH 1.3 TCE EDC 140 FAZ2",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/11/y1874030_20260811153040.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758748/hasarli-oto-2023-renault-megane-sedan-touch-13-tce-edc-140-faz2"
+  },
+  {
+    "sira": 40,
+    "arac_no": "201758852",
+    "baslik": "FIAT LINEA POP 1.3 MULTIJET 95",
+    "yil": "2014",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/06/y356983_20260806090855.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201758852/hasarli-oto-2014-fiat-linea-pop-13-multijet-95"
+  },
+  {
+    "sira": 41,
+    "arac_no": "201759438",
+    "baslik": "TOYOTA COROLLA 1.5 DREAM MULTIDRIVE S FL",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/23/y5698380_20260723094136.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201759438/hasarli-oto-2023-toyota-corolla-15-dream-multidrive-s-fl"
+  },
+  {
+    "sira": 42,
+    "arac_no": "201759629",
+    "baslik": "RENAULT CEKICI T 480 E6 RET ADR",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/30/y3072990_20260730085535.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201759629/hasarli-oto-2025-renault-cekici-t-480-e6-ret-adr"
+  },
+  {
+    "sira": 43,
+    "arac_no": "201759881",
+    "baslik": "BYD SEAL U EV",
+    "yil": "2025",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/30/y2777056_20260730090256.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201759881/hasarli-oto-2025-byd-seal-u-ev"
+  },
+  {
+    "sira": 44,
+    "arac_no": "201760012",
+    "baslik": "OPEL ASTRA NB 1.6 115 EDITION PLUS",
+    "yil": "2017",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/06/y5280693_20260806090627.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201760012/hasarli-oto-2017-opel-astra-nb-16-115-edition-plus"
+  },
+  {
+    "sira": 45,
+    "arac_no": "201760023",
+    "baslik": "RENAULT TALISMAN TOUCH 1.6 DCI 130 EDC",
+    "yil": "2016",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/27/y5620521_20260727105045.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201760023/hasarli-oto-2016-renault-talisman-touch-16-dci-130-edc"
+  },
+  {
+    "sira": 46,
+    "arac_no": "201760293",
+    "baslik": "VOLKSWAGEN POLO 1.4 COMFORTLINE TIPTRONIC DSG (85)",
+    "yil": "2011",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/31/y114417_20260731085218.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201760293/hasarli-oto-2011-volkswagen-polo-14-comfortline-tiptronic-dsg-85"
+  },
+  {
+    "sira": 47,
+    "arac_no": "201760398",
+    "baslik": "KIA CEED CONCEPT PLUS 1.6 CRDI 128",
+    "yil": "2013",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/23/y170720_20260723160239.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201760398/hasarli-oto-2013-kia-ceed-concept-plus-16-crdi-128"
+  },
+  {
+    "sira": 48,
+    "arac_no": "201760435",
+    "baslik": "OPEL ASTRA HB 1.4 150 AT6 S&S ENJOY",
+    "yil": "2017",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/23/y4349893_20260723094040.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201760435/hasarli-oto-2017-opel-astra-hb-14-150-at6-ss-enjoy"
+  },
+  {
+    "sira": 49,
+    "arac_no": "201760899",
+    "baslik": "CITROEN NEMO COMBI 1.4 HDI SX PLUS",
+    "yil": "2009",
+    "gorsel_url": "",
+    "detay_url": "https://aksamoto.com.tr/detay/201760899/hasarli-oto-2009-citroen-nemo-combi-14-hdi-sx-plus"
+  },
+  {
+    "sira": 50,
+    "arac_no": "201760904",
+    "baslik": "HYUNDAI ELANTRA 1.6 MPI (123) CVT STYLE COMFORT",
+    "yil": "2022",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/11/y163033_20260811093406.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201760904/hasarli-oto-2022-hyundai-elantra-16-mpi-123-cvt-style-comfort"
+  },
+  {
+    "sira": 51,
+    "arac_no": "201761018",
+    "baslik": "RENAULT CLIO HB EXTREME EDITION 1.5 DCI 75 E5",
+    "yil": "2012",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/20/y1968838_20260720095643.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761018/hasarli-oto-2012-renault-clio-hb-extreme-edition-15-dci-75-e5"
+  },
+  {
+    "sira": 52,
+    "arac_no": "201761099",
+    "baslik": "FIAT EGEA CROSS URBAN 1.6 M.JET 130 DCT",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/04/y2302489_20260804090525.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761099/hasarli-oto-2023-fiat-egea-cross-urban-16-mjet-130-dct"
+  },
+  {
+    "sira": 53,
+    "arac_no": "201761109",
+    "baslik": "KIA SPORTAGE 2.0 DSL EX OV DVD",
+    "yil": "2008",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/03/y7102625_20260803093812.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761109/hasarli-oto-2008-kia-sportage-20-dsl-ex-ov-dvd"
+  },
+  {
+    "sira": 54,
+    "arac_no": "201761486",
+    "baslik": "HYUNDAI IONIQ 6",
+    "yil": "2023",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/29/y6520091_20260729090326.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761486/hasarli-oto-2023-hyundai-ioniq-6"
+  },
+  {
+    "sira": 55,
+    "arac_no": "201761571",
+    "baslik": "OPEL ASTRA HB 1.4 150 AT6 S&S DYNAMIC",
+    "yil": "2016",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/30/y3005317_20260730101006.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761571/hasarli-oto-2016-opel-astra-hb-14-150-at6-ss-dynamic"
+  },
+  {
+    "sira": 56,
+    "arac_no": "201761597",
+    "baslik": "VOLVO CEKICI FM13 427 500 E",
+    "yil": "2020",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/03/y2089116_20260803085327.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761597/hasarli-oto-2020-volvo-cekici-fm13-427-500-e"
+  },
+  {
+    "sira": 57,
+    "arac_no": "201761666",
+    "baslik": "PEUGEOT 3008 ACTIVE 1.2 PURETECH 130 EAT6",
+    "yil": "2017",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/11/y1741198_20260811152948.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761666/hasarli-oto-2017-peugeot-3008-active-12-puretech-130-eat6"
+  },
+  {
+    "sira": 58,
+    "arac_no": "201761730",
+    "baslik": "HYUNDAI IONIQ 5 ADVANCE 125 KW",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/07/31/y1776289_20260731090228.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761730/hasarli-oto-2024-hyundai-ioniq-5-advance-125-kw"
+  },
+  {
+    "sira": 59,
+    "arac_no": "201761736",
+    "baslik": "RENAULT AUSTRAL TECHNO ESPRIT ALPINE M.HYBRID 160 AT",
+    "yil": "2024",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/06/y6650704_20260806100938.jpeg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761736/hasarli-oto-2024-renault-austral-techno-esprit-alpine-mhybrid-160-at"
+  },
+  {
+    "sira": 60,
+    "arac_no": "201761968",
+    "baslik": "JEEP JEEP CHEROKEE 2.0 9ATX LİMİTED AWD DIZEL",
+    "yil": "2015",
+    "gorsel_url": "https://images.aksamoto.com.tr/2026/08/10/y4969902_20260810093024.jpg",
+    "detay_url": "https://aksamoto.com.tr/detay/201761968/hasarli-oto-2015-jeep-jeep-cherokee-20-9atx-limited-awd-dizel"
   }
 ]
