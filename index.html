@@ -217,35 +217,62 @@
               <div class="cost-card bg-red">
                 <div class="cost-icon"><i data-lucide="shield-alert"></i></div>
                 <div class="cost-info">
-                  <span class="cost-title">Sigorta Şişirmesi</span>
-                  <span class="cost-desc">Tramer tahmini</span>
-                  <span class="cost-val text-red" id="cost-insurance">₺0</span>
-                </div>
-              </div>
-
-              <div class="cost-card bg-blue">
-                <div class="cost-icon"><i data-lucide="tool"></i></div>
-                <div class="cost-info">
                   <span class="cost-title">Yetkili Servis</span>
-                  <span class="cost-desc">Orijinal parça</span>
-                  <span class="cost-val text-blue" id="cost-authorized">₺0</span>
+                  <span class="cost-desc">Orijinal Parça ile</span>
+                  <span class="cost-val text-red" id="cost-authorized">₺0</span>
                 </div>
               </div>
 
               <div class="cost-card bg-green">
                 <div class="cost-icon"><i data-lucide="wrench"></i></div>
                 <div class="cost-info">
-                  <span class="cost-title">Özel Servis / Sanayi</span>
-                  <span class="cost-desc">Çıkma/Yan Sanayi</span>
+                  <span class="cost-title">Özel Servis</span>
+                  <span class="cost-desc">Çıkma/Yan Sanayi ile</span>
                   <span class="cost-val text-green" id="cost-mechanic">₺0</span>
                 </div>
               </div>
 
             </div>
           </div>
+          
+          <div class="financial-analysis mb-6 p-4 glass-panel" style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;">
+             <h3 class="mb-3 text-lg" style="display:flex; align-items:center; gap:8px;">
+               <i data-lucide="trending-up" class="text-primary"></i> Yapay Zeka Finansal Analizi
+             </h3>
+             <div style="display:flex; flex-direction:column; gap:12px;">
+                <div class="row-between">
+                  <span class="text-muted">Hasarsız Pazar Rayici:</span>
+                  <span class="text-white font-bold" id="ai-market-value">Hesaplanıyor...</span>
+                </div>
+                <div class="row-between">
+                  <span class="text-muted">Araç Maliyeti (Tahmini Alış):</span>
+                  <span class="text-white font-bold" id="ai-buy-cost">Hesaplanıyor...</span>
+                </div>
+                <div class="row-between">
+                  <span class="text-muted">Özel Servis Onarım Tutarı:</span>
+                  <span class="text-white font-bold" id="ai-repair-cost">Hesaplanıyor...</span>
+                </div>
+                <div style="height:1px; background:rgba(255,255,255,0.1); margin:4px 0;"></div>
+                <div class="row-between">
+                  <span class="text-muted">Onarım Sonrası Tahmini Satış:</span>
+                  <span class="text-green font-bold text-lg" id="ai-resale-value">Hesaplanıyor...</span>
+                </div>
+                <div class="row-between">
+                  <span class="text-muted">Tahmini Net Kar:</span>
+                  <span class="text-primary font-bold text-lg" id="ai-net-profit">Hesaplanıyor...</span>
+                </div>
+             </div>
+          </div>
+
+          <div class="report-section mb-6" id="parts-supply-section">
+            <h3 class="mb-3 text-lg"><i data-lucide="box" style="display:inline-block; vertical-align:middle; margin-right:5px; width:20px;"></i>Eksik/Hasarlı Parça Tedariki</h3>
+            <div id="parts-list" style="display:flex; flex-direction:column; gap:10px;">
+              <!-- JS ile doldurulacak -->
+            </div>
+          </div>
 
           <div class="report-section" id="detected-damages-section">
-            <h3 class="mb-3 text-lg">Yapay Zeka Hasar Tespitleri</h3>
+            <h3 class="mb-3 text-lg"><i data-lucide="camera" style="display:inline-block; vertical-align:middle; margin-right:5px; width:20px;"></i>Görsel Hasar Tespitleri</h3>
             <div id="damages-list">
             </div>
           </div>
